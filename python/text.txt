@@ -1,0 +1,1303 @@
+websocket opened
+do_prepare_steps--------------------------------
+check has access right --------------------------------
+finished access check ------------------------------
+{'id': 20, 'jsonrpc': '2.0', 'result': {'accessGranted': True, 'message': 'The access right to the application has already been granted.'}}
+authorize --------------------------------
+auth request 
+ {
+    "jsonrpc": "2.0",
+    "method": "authorize",
+    "params": {
+        "clientId": "sZteLJ27aZCq63F2Im8yeKuAk7K1hNRIiOnw3Dm2",
+        "clientSecret": "RAaU3dRa8dBMkkvTzCxMheJGuxSrtIVYqvlEV1qd8WXbTPLJRm1dS15j7ZlgzojARuBzMJyPo0kczLnqwMwZ15TSOZPvXNS1ThQUKmOGrY4QQWTzV48lxI8PtOvgDJCC",
+        "license": "",
+        "debit": 10
+    },
+    "id": 4
+}
+{'id': 4, 'jsonrpc': '2.0', 'result': {'cortexToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU'}}
+Authorize successfully.
+query headset --------------------------------
+queryHeadsets request 
+ {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "queryHeadsets",
+    "params": {}
+}
+{'id': 1, 'jsonrpc': '2.0', 'result': [{'connectedBy': 'dongle', 'customName': 'Test1', 'dfuTypes': ['dfuNone'], 'dongle': '6ff', 'firmware': '634', 'headbandPosition': None, 'id': 'EPOCPLUS-4B84EF89', 'isDfuMode': False, 'isVirtual': True, 'motionSensors': ['Q0', 'Q1', 'Q2', 'Q3', 'ACCX', 'ACCY', 'ACCZ', 'MAGX', 'MAGY', 'MAGZ'], 'sensors': ['AF3', 'F7', 'F3', 'FC5', 'T7', 'P7', 'O1', 'O2', 'P8', 'T8', 'FC6', 'F4', 'F8', 'AF4'], 'settings': {'eegRate': 256, 'eegRes': 16, 'memsRate': 64, 'memsRes': 16, 'mode': 'EPOCPLUS'}, 'status': 'connected', 'virtualHeadsetId': '4b84ef89-6d7d-4bb3-af9f-c765ae180160'}]}
+headsetId: EPOCPLUS-4B84EF89, status: connected, connected_by: dongle
+query headset --------------------------------
+queryHeadsets request 
+ {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "queryHeadsets",
+    "params": {}
+}
+{'id': 1, 'jsonrpc': '2.0', 'result': [{'connectedBy': 'dongle', 'customName': 'Test1', 'dfuTypes': ['dfuNone'], 'dongle': '6ff', 'firmware': '634', 'headbandPosition': None, 'id': 'EPOCPLUS-4B84EF89', 'isDfuMode': False, 'isVirtual': True, 'motionSensors': ['Q0', 'Q1', 'Q2', 'Q3', 'ACCX', 'ACCY', 'ACCZ', 'MAGX', 'MAGY', 'MAGZ'], 'sensors': ['AF3', 'F7', 'F3', 'FC5', 'T7', 'P7', 'O1', 'O2', 'P8', 'T8', 'FC6', 'F4', 'F8', 'AF4'], 'settings': {'eegRate': 256, 'eegRes': 16, 'memsRate': 64, 'memsRes': 16, 'mode': 'EPOCPLUS'}, 'status': 'connected', 'virtualHeadsetId': '4b84ef89-6d7d-4bb3-af9f-c765ae180160'}]}
+headsetId: EPOCPLUS-4B84EF89, status: connected, connected_by: dongle
+create session --------------------------------
+create session request 
+ {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "method": "createSession",
+    "params": {
+        "cortexToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU",
+        "headset": "EPOCPLUS-4B84EF89",
+        "status": "active"
+    }
+}
+{'id': 5, 'jsonrpc': '2.0', 'result': {'appId': 'com.lgh4gc.independent-study', 'headset': {'connectedBy': 'dongle', 'dfuTypes': ['dfuNone'], 'dongle': '6ff', 'firmware': '634', 'id': 'EPOCPLUS-4B84EF89', 'isDfuMode': False, 'isVirtual': True, 'motionSensors': ['Q0', 'Q1', 'Q2', 'Q3', 'ACCX', 'ACCY', 'ACCZ', 'MAGX', 'MAGY', 'MAGZ'], 'sensors': ['AF3', 'F7', 'F3', 'FC5', 'T7', 'P7', 'O1', 'O2', 'P8', 'T8', 'FC6', 'F4', 'F8', 'AF4'], 'settings': {'eegRate': 256, 'eegRes': 16, 'memsRate': 64, 'memsRes': 16, 'mode': 'EPOCPLUS'}, 'status': 'connected', 'virtualHeadsetId': '4b84ef89-6d7d-4bb3-af9f-c765ae180160'}, 'id': 'c88774be-500a-432c-9be2-9fa45b970172', 'license': '223dad9b-5bd0-4e87-b128-dd57c19d5799', 'owner': 'lgh4gc', 'performanceMetrics': [{'apiName': 'eng', 'displayedName': 'Engagement', 'name': 'engagement', 'shortDisplayedName': 'En'}, {'apiName': 'exc', 'displayedName': 'Excitement', 'name': 'excitement', 'shortDisplayedName': 'Ex'}, {'apiName': 'str', 'displayedName': 'Stress', 'name': 'stress', 'shortDisplayedName': 'St'}, {'apiName': 'rel', 'displayedName': 'Relaxation', 'name': 'relaxation', 'shortDisplayedName': 'Re'}, {'apiName': 'int', 'displayedName': 'Interest', 'name': 'interest', 'shortDisplayedName': 'In'}, {'apiName': 'foc', 'displayedName': 'Focus', 'name': 'focus', 'shortDisplayedName': 'Fo'}], 'recordIds': [], 'recording': False, 'started': '2022-12-06T21:13:17.122-05:00', 'status': 'activated', 'stopped': '', 'streams': []}}
+The session c88774be-500a-432c-9be2-9fa45b970172 is created successfully.
+on_create_session_done
+query profile --------------------------------
+query profile request 
+ {
+    "jsonrpc": "2.0",
+    "method": "queryProfile",
+    "params": {
+        "cortexToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU"
+    },
+    "id": 8
+}
+
+
+{'id': 8, 'jsonrpc': '2.0', 'result': [{'meta': {'creation_time': '2022-12-06T16:41:34.410-05:00'}, 'name': 'Test1', 'uuid': '3a22f585-22a1-4065-a2d0-9a77bd9f7416'}, {'meta': {'creation_time': '2022-10-06T11:44:52.103-04:00'}, 'name': 'Lucia', 'uuid': '9d1f965b-cd93-4f95-a3d5-8811c58c699e'}]}
+on_query_profile_done
+get current profile:
+get current profile json:
+ {
+    "jsonrpc": "2.0",
+    "method": "getCurrentProfile",
+    "params": {
+        "cortexToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU",
+        "headset": "EPOCPLUS-4B84EF89"
+    },
+    "id": 21
+}
+
+
+{'id': 21, 'jsonrpc': '2.0', 'result': {'loadedByThisApp': False, 'name': None, 'uuid': None}}
+{'loadedByThisApp': False, 'name': None, 'uuid': None}
+get_current_profile: no profile loaded with the headset EPOCPLUS-4B84EF89
+setup profile: load -------------------------------- 
+setup profile json:
+ {
+    "jsonrpc": "2.0",
+    "method": "setupProfile",
+    "params": {
+        "cortexToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU",
+        "headset": "EPOCPLUS-4B84EF89",
+        "profile": "Test1",
+        "status": "load"
+    },
+    "id": 7
+}
+
+
+{'id': 7, 'jsonrpc': '2.0', 'result': {'action': 'load', 'message': 'The profile is loaded successfully', 'name': 'Test1'}}
+load profile successfully
+subscribe request --------------------------------
+subscribe request 
+ {
+    "jsonrpc": "2.0",
+    "method": "subscribe",
+    "params": {
+        "cortexToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImNvbS5sZ2g0Z2MuaW5kZXBlbmRlbnQtc3R1ZHkiLCJhcHBWZXJzaW9uIjoiMS4wLjAiLCJleHAiOjE2NzA1NTE5OTcsIm5iZiI6MTY3MDI5Mjc5NywidXNlcklkIjoiMGZmNjRjZTUtZGI3Zi00MDBiLWFkOTktNjBmMWE2MjNjMGFjIiwidXNlcm5hbWUiOiJsZ2g0Z2MiLCJ2ZXJzaW9uIjoiMi4wIn0.5SSWuMZESq9PnRcgcNLh7VTTsC0rGK7xQY9i_6z0DoU",
+        "session": "c88774be-500a-432c-9be2-9fa45b970172",
+        "streams": [
+            "sys"
+        ]
+    },
+    "id": 6
+}
+{'id': 6, 'jsonrpc': '2.0', 'result': {'failure': [], 'success': [{'cols': ['event', 'msg'], 'sid': 'c88774be-500a-432c-9be2-9fa45b970172', 'streamName': 'sys'}]}}
+The data stream sys is subscribed successfully.
+{'streamName': 'sys', 'labels': ['event', 'msg']}
+on_new_data_labels
+{'streamName': 'sys', 'labels': ['event', 'msg']}
+on_new_data_labels: start training 
+
+
+To train commands, type "1". To begin the game, type "2"
+>>> Getting USER login...
+arrived here 1 ----------------------------
+arrived here 2 ----------------------------
+arrived here 2.5 ----------------------------
+None
+arrived here 3 ----------------------------
+arrived here 4 ----------------------------
+arrived here 5 ----------------------------
+Cortex.setup_profile() takes 3 positional arguments but 4 were given
+{'id': 25, 'jsonrpc': '2.0', 'result': [{'currentOSUId': '501', 'currentOSUsername': 'rachael', 'lastLoginTime': '2022-11-29T20:22:53.779-05:00', 'loggedInOSUId': '501', 'loggedInOSUsername': 'rachael', 'username': 'lgh4gc'}]}
+LOGIN -----------------------------------
+501
+{'id': 6, 'jsonrpc': '2.0', 'result': {'failure': [], 'success': [{'cols': ['act', 'pow'], 'sid': 'c88774be-500a-432c-9be2-9fa45b970172', 'streamName': 'com'}]}}
+The data stream com is subscribed successfully.
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:561, y:761
+left inside
+left
+x:593, y:732
+left inside
+left
+x:881, y:477
+left inside
+left
+x:924, y:455
+left inside
+left
+x:927, y:454
+left inside
+left
+x:902, y:348
+left inside
+left
+x:902, y:348
+left inside
+left
+x:904, y:354
+left inside
+left
+x:907, y:346
+left inside
+left
+x:888, y:338
+left inside
+left
+x:805, y:336
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:805, y:334
+left inside
+left
+x:829, y:436
+left inside
+left
+x:937, y:574
+left inside
+left
+x:937, y:574
+left inside
+left
+x:971, y:563
+left inside
+left
+x:1016, y:553
+left inside
+left
+x:1021, y:552
+left inside
+left
+x:1025, y:553
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:1031, y:554
+left inside
+left
+x:818, y:449
+left inside
+left
+x:742, y:379
+left inside
+left
+x:742, y:388
+left inside
+left
+x:742, y:388
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:742, y:386
+left inside
+left
+x:738, y:386
+left inside
+left
+x:734, y:386
+left inside
+left
+x:730, y:386
+left inside
+left
+x:726, y:386
+left inside
+left
+x:722, y:386
+left inside
+left
+x:718, y:386
+left inside
+left
+x:714, y:386
+left inside
+left
+x:710, y:386
+left inside
+left
+x:706, y:386
+left inside
+left
+x:702, y:386
+left inside
+left
+x:698, y:386
+left inside
+left
+x:694, y:386
+left inside
+left
+x:690, y:386
+left inside
+left
+x:686, y:386
+left inside
+left
+x:682, y:386
+left inside
+left
+x:678, y:386
+left inside
+left
+x:674, y:386
+left inside
+left
+x:670, y:386
+left inside
+left
+x:666, y:386
+left inside
+left
+x:662, y:386
+left inside
+left
+x:681, y:376
+left inside
+left
+x:704, y:364
+left inside
+left
+x:710, y:362
+left inside
+left
+x:706, y:361
+left inside
+left
+x:702, y:361
+left inside
+left
+x:698, y:361
+left inside
+left
+x:694, y:361
+left inside
+left
+x:690, y:361
+left inside
+left
+x:686, y:361
+left inside
+left
+x:682, y:361
+left inside
+left
+x:678, y:361
+left inside
+left
+x:674, y:361
+left inside
+left
+x:670, y:361
+left inside
+left
+x:666, y:361
+left inside
+left
+x:662, y:361
+left inside
+left
+x:658, y:361
+left inside
+left
+x:654, y:361
+left inside
+left
+x:650, y:361
+left inside
+left
+x:646, y:361
+left inside
+left
+x:642, y:361
+left inside
+left
+x:705, y:355
+left inside
+left
+x:745, y:352
+left inside
+left
+x:741, y:352
+left inside
+left
+x:737, y:352
+left inside
+left
+x:733, y:352
+left inside
+left
+x:729, y:352
+left inside
+left
+x:725, y:352
+left inside
+left
+x:721, y:352
+left inside
+left
+x:717, y:352
+left inside
+left
+x:713, y:352
+left inside
+left
+x:709, y:352
+left inside
+left
+x:705, y:352
+left inside
+left
+x:701, y:352
+left inside
+left
+x:697, y:352
+left inside
+left
+x:693, y:352
+left inside
+left
+x:689, y:352
+left inside
+left
+x:685, y:352
+left inside
+left
+x:681, y:352
+left inside
+left
+x:677, y:352
+left inside
+left
+x:673, y:352
+left inside
+left
+x:669, y:352
+left inside
+left
+x:738, y:352
+left inside
+left
+x:779, y:352
+left inside
+left
+x:805, y:354
+left inside
+left
+x:833, y:356
+left inside
+left
+x:830, y:357
+left inside
+left
+x:820, y:360
+left inside
+left
+x:815, y:360
+left inside
+left
+x:811, y:360
+left inside
+left
+x:807, y:360
+left inside
+left
+x:803, y:360
+left inside
+left
+x:799, y:360
+left inside
+left
+x:795, y:360
+left inside
+left
+x:791, y:360
+left inside
+left
+x:787, y:360
+left inside
+left
+x:783, y:360
+left inside
+left
+x:779, y:360
+left inside
+left
+x:775, y:360
+left inside
+left
+x:771, y:360
+left inside
+left
+x:767, y:360
+left inside
+left
+x:763, y:360
+left inside
+left
+x:759, y:360
+left inside
+left
+x:764, y:360
+left inside
+left
+x:836, y:355
+left inside
+left
+x:850, y:401
+left inside
+left
+x:841, y:455
+left inside
+left
+x:813, y:474
+left inside
+left
+x:792, y:486
+left inside
+left
+x:882, y:529
+left inside
+left
+x:888, y:547
+left inside
+left
+x:884, y:547
+left inside
+left
+x:929, y:732
+left inside
+left
+x:930, y:769
+left inside
+left
+x:922, y:753
+left inside
+left
+x:911, y:740
+left inside
+left
+x:907, y:740
+left inside
+left
+x:903, y:740
+left inside
+left
+x:899, y:740
+left inside
+left
+x:895, y:740
+left inside
+left
+x:891, y:740
+left inside
+left
+x:887, y:734
+left inside
+left
+x:886, y:510
+left inside
+left
+x:866, y:391
+left inside
+left
+x:858, y:358
+left inside
+left
+x:854, y:358
+left inside
+left
+x:850, y:358
+left inside
+left
+x:846, y:358
+left inside
+left
+x:842, y:358
+left inside
+left
+x:838, y:358
+left inside
+left
+x:834, y:358
+left inside
+left
+x:830, y:358
+left inside
+left
+x:826, y:358
+left inside
+left
+x:822, y:358
+left inside
+left
+x:818, y:358
+left inside
+left
+x:814, y:358
+left inside
+left
+x:810, y:358
+left inside
+left
+x:806, y:358
+left inside
+left
+x:802, y:358
+left inside
+left
+x:798, y:358
+left inside
+left
+x:794, y:358
+left inside
+left
+x:790, y:358
+left inside
+left
+x:786, y:358
+left inside
+left
+x:782, y:358
+left inside
+left
+x:778, y:358
+left inside
+left
+x:774, y:358
+left inside
+left
+x:770, y:358
+left inside
+left
+x:766, y:358
+left inside
+left
+x:762, y:358
+left inside
+left
+x:758, y:358
+left inside
+left
+x:754, y:358
+left inside
+left
+x:750, y:358
+left inside
+left
+x:746, y:358
+left inside
+left
+x:742, y:358
+left inside
+left
+x:738, y:358
+left inside
+left
+x:734, y:358
+left inside
+left
+x:730, y:358
+left inside
+left
+x:738, y:358
+left inside
+left
+x:829, y:354
+left inside
+left
+x:900, y:348
+left inside
+left
+x:907, y:345
+left inside
+left
+x:903, y:345
+left inside
+left
+x:899, y:345
+left inside
+left
+x:895, y:345
+left inside
+left
+x:891, y:345
+left inside
+left
+x:887, y:345
+left inside
+left
+x:883, y:345
+left inside
+left
+x:879, y:345
+left inside
+left
+x:875, y:345
+left inside
+left
+x:871, y:345
+left inside
+left
+x:867, y:345
+left inside
+left
+x:863, y:345
+left inside
+left
+x:859, y:345
+left inside
+left
+x:855, y:345
+left inside
+left
+x:851, y:345
+left inside
+left
+x:847, y:345
+left inside
+left
+x:843, y:345
+left inside
+left
+x:839, y:345
+left inside
+left
+x:835, y:345
+left inside
+left
+x:831, y:345
+left inside
+left
+x:827, y:345
+left inside
+left
+x:823, y:345
+left inside
+left
+x:819, y:345
+left inside
+left
+x:815, y:345
+left inside
+left
+x:811, y:345
+left inside
+left
+x:807, y:345
+left inside
+left
+x:803, y:345
+left inside
+left
+x:799, y:345
+left inside
+left
+x:795, y:345
+left inside
+left
+x:791, y:345
+left inside
+left
+x:787, y:345
+left inside
+left
+x:783, y:345
+left inside
+left
+x:779, y:345
+left inside
+left
+x:775, y:345
+left inside
+left
+x:771, y:345
+left inside
+left
+x:767, y:345
+left inside
+left
+x:763, y:345
+left inside
+left
+x:759, y:345
+left inside
+left
+x:755, y:345
+left inside
+left
+x:751, y:345
+left inside
+left
+x:747, y:345
+left inside
+left
+x:743, y:345
+left inside
+left
+x:739, y:345
+left inside
+left
+x:735, y:345
+left inside
+left
+x:731, y:345
+left inside
+left
+x:727, y:345
+left inside
+left
+x:723, y:345
+left inside
+left
+x:719, y:345
+left inside
+left
+x:715, y:345
+left inside
+left
+x:711, y:345
+left inside
+left
+x:707, y:345
+left inside
+left
+x:703, y:345
+left inside
+left
+x:699, y:345
+left inside
+left
+x:695, y:345
+left inside
+left
+x:691, y:345
+left inside
+left
+x:687, y:345
+left inside
+left
+x:683, y:345
+left inside
+left
+x:706, y:342
+left inside
+left
+x:889, y:346
+left inside
+left
+x:917, y:348
+left inside
+left
+x:913, y:348
+left inside
+left
+x:909, y:348
+left inside
+left
+x:905, y:348
+left inside
+left
+x:901, y:348
+left inside
+left
+x:897, y:348
+left inside
+left
+x:893, y:348
+left inside
+left
+x:889, y:348
+left inside
+left
+x:885, y:348
+left inside
+left
+x:881, y:348
+left inside
+left
+x:877, y:348
+left inside
+left
+x:873, y:348
+left inside
+left
+x:869, y:348
+left inside
+left
+x:865, y:348
+left inside
+left
+x:861, y:348
+left inside
+left
+x:857, y:348
+left inside
+left
+x:853, y:348
+left inside
+left
+x:849, y:348
+left inside
+left
+x:845, y:348
+left inside
+left
+x:841, y:348
+left inside
+left
+x:837, y:348
+left inside
+left
+x:833, y:348
+left inside
+left
+x:829, y:348
+left inside
+left
+x:825, y:348
+left inside
+left
+x:821, y:348
+left inside
+left
+x:817, y:348
+left inside
+left
+x:813, y:348
+left inside
+left
+x:809, y:348
+left inside
+left
+x:805, y:348
+left inside
+left
+x:801, y:348
+left inside
+left
+x:797, y:348
+left inside
+left
+x:793, y:348
+left inside
+left
+x:785, y:348
+left inside
+left
+x:575, y:215
+left inside
+left
+x:536, y:182
+left inside
+left
+x:532, y:182
+left inside
+left
+x:463, y:166
+left inside
+left
+x:422, y:172
+left inside
+left
+x:453, y:418
+left inside
+left
+x:429, y:440
+left inside
+left
+x:371, y:106
+left inside
+left
+x:378, y:91
+left inside
+left
+x:376, y:106
+left inside
+left
+x:380, y:129
+left inside
+left
+x:377, y:132
+left inside
+left
+x:376, y:139
+left inside
+left
+x:379, y:143
+left inside
+left
+x:381, y:144
+left inside
+left
+x:382, y:145
+left inside
+left
+x:381, y:145
+left inside
+left
+x:383, y:146
+left inside
+left
+x:385, y:146
+left inside
+left
+x:382, y:146
+left inside
+left
+x:378, y:146
+left inside
+left
+x:374, y:146
+left inside
+left
+x:370, y:146
+left inside
+left
+x:385, y:151
+left inside
+left
+x:391, y:151
+left inside
+left
+x:387, y:151
+left inside
+left
+x:383, y:151
+left inside
+left
+x:379, y:151
+left inside
+left
+x:375, y:151
+left inside
+left
+x:384, y:147
+left inside
+left
+x:391, y:146
+left inside
+left
+x:390, y:146
+left inside
+left
+x:386, y:146
+left inside
+left
+x:382, y:146
+left inside
+left
+x:378, y:146
+left inside
+left
+x:374, y:146
+left inside
+left
+x:462, y:235
+left inside
+left
+x:637, y:324
+left inside
+left
+x:688, y:332
+left inside
+left
+x:684, y:332
+left inside
+left
+x:680, y:332
+left inside
+left
+x:676, y:332
+left inside
+left
+x:672, y:332
+left inside
+left
+x:668, y:332
+left inside
