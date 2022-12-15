@@ -117,7 +117,6 @@ class Cortex(Dispatcher):
         self.websock_thread  = threading.Thread(target=self.ws.run_forever, args=(None, sslopt), name=threadName)
         self.websock_thread.start()
         self.websock_thread.join()
-        print("end open")
 
     def close(self):
         self.ws.close()
@@ -336,7 +335,7 @@ class Cortex(Dispatcher):
                 self.emit('warn_cortex_stop_all_sub', data=session_id)
                 self.session_id = ''
 
-    def parse_incomming_data(self):
+    def parse_incomming_data(self, power):
         
         thought = self.thought
         print(thought)
@@ -350,16 +349,16 @@ class Cortex(Dispatcher):
 
         if thought == "left" and x > 0:
             print("left inside")
-            pyautogui.move(-4, 0)
+            pyautogui.move(-power*10, 0)
         elif thought == "right" and x < maxX:
             print("right")
-            pyautogui.move(4, 0)
+            pyautogui.move(power*10, 0)
         elif thought == "lift" and y < maxY:
             print("lift")
-            pyautogui.move(0, -4)
+            pyautogui.move(0, -power*10)
         elif thought == "drop" and y > 0:
             print("drop")
-            pyautogui.move(0, 4)
+            pyautogui.move(0, power*10)
         elif thought == "neutral":
             print("neutral")
             pyautogui.move(0, 0)
@@ -373,11 +372,10 @@ class Cortex(Dispatcher):
         if result_dic.get('com') != None:
             com_data = {}
             com_data['action'] = result_dic['com'][0]
-            # print(result_dic['com'][0])
             self.thought = result_dic['com'][0]
-            com_data['power'] = result_dic['com'][1]
+            power = com_data['power'] = result_dic['com'][1]
             com_data['time'] = result_dic['time']
-            self.parse_incomming_data()
+            self.parse_incomming_data(power)
             self.emit('new_com_data', data=com_data)
         elif result_dic.get('fac') != None:
             fe_data = {}
