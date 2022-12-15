@@ -138,8 +138,8 @@ class Run():
 def main():
 
     # Please fill your application clientId and clientSecret before running script
-    your_app_client_id = 'sZteLJ27aZCq63F2Im8yeKuAk7K1hNRIiOnw3Dm2'
-    your_app_client_secret = 'RAaU3dRa8dBMkkvTzCxMheJGuxSrtIVYqvlEV1qd8WXbTPLJRm1dS15j7ZlgzojARuBzMJyPo0kczLnqwMwZ15TSOZPvXNS1ThQUKmOGrY4QQWTzV48lxI8PtOvgDJCC'
+    your_app_client_id = 'XXX'
+    your_app_client_secret = 'XXX'
 
     r = Run(your_app_client_id, your_app_client_secret)
     r.start(PROFILE_NAME)
